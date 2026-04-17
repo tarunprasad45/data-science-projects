@@ -1,107 +1,53 @@
-# 📊 Marketing Campaign Analytics Project
-
-A complete data analysis project that evaluates marketing campaign performance across multiple platforms using real-world KPIs like CTR, CAC, and ROAS.
-
----
-
-## 🚀 What This Project Does
-
-This project takes raw campaign data → cleans it → analyzes it → produces insights and visualizations.
-
-### Pipeline:
-
-1. **Data Cleaning**
-2. **KPI Calculation**
-3. **Visualization**
-4. **Statistical Testing (A/B Test)**
+# Marketing Campaign Performance Analysis
+**Portfolio Project | Python · Pandas · Matplotlib · SciPy**
 
 ---
 
-## 📁 Project Structure
-project-03/
-│
-├── data/
-│ ├── Marketing_Campaign_Data.xlsx
-│ └── campaigns_clean.csv
-│
-├── charts/
-│ ├── chart1_ctr_by_platform.png
-│ ├── chart2_roas_by_platform.png
-│ ├── chart3_cac_by_platform.png
-│ ├── chart4_monthly_spend.png
-│ └── chart5_ab_test.png
-│
-├── scripts/
-│ ├── clean.py
-│ ├── 02_analyse.py
-│ └── 03_stats_ab.py
-│
-└── README.md
----
+## Overview
 
-## 📌 Key Metrics
-
-### CTR (Click-Through Rate)
-```math
-### CTR = \frac{Clicks}{Impressions} \times 100
-
----
-### CAC (Customer Acquisition Cost)
-CAC=
-Enrollments
-Total Cost
----
-```
----
-### ROAS (Return on Ad Spend)
-ROAS=
-Cost
-Revenue
----
-
----
-### 2. 📊 Key Insights
-🔹 Platform Performance
-Platform	CTR (%)	ROAS (x)	CAC (₹)
-Facebook	5.56	23.46	234
-Google Ads	5.48	22.97	243
-Instagram	5.46	24.01	230
-LinkedIn	5.58	25.45	219
-YouTube	    5.58	22.13	243
+End-to-end analysis of a multi-platform digital marketing dataset covering **Jan 2024 – Oct 2025** (~22 months). Built a three-script Python pipeline to clean raw Excel data, compute KPIs, produce publication-ready charts, and run statistical significance testing.
 
 ---
 
-## Observations
+## Pipeline
 
-LinkedIn → Best overall platform
-Highest ROAS (25.45x)
-Lowest CAC (₹219)
-YouTube & Google Ads
-Higher cost (₹243)
-Lower efficiency → not ideal for scaling
-CTR across platforms is very similar (~5.4–5.6%)
-Suggests creative quality is consistent
-Differences come from conversion efficiency, not clicks
+| Script | What it does |
+|---|---|
+| `clean.py` | Loads raw Excel, renames columns, drops nulls/duplicates, saves clean CSV |
+| `02_analyse.py` | Aggregates by platform, calculates CTR / ROAS / CAC, generates 4 charts |
+| `03_stats_ab.py` | Computes per-platform descriptive stats, runs A/B Z-test on CTR |
 
 ---
 
-## Monthly Spend Trend
-Mostly stable: ₹30L–₹40L/month
-Occasional spikes (~₹70L–₹80L)
-Likely campaign bursts or launches
+## Key Findings
+
+### CTR by Platform
+All five platforms (Facebook, Google Ads, Instagram, LinkedIn, YouTube) cluster tightly between **5.46% – 5.58%**, indicating consistent audience engagement across channels.
+
+### ROAS by Platform
+Every platform returns well above break-even. **LinkedIn leads at 25.45x**, followed by Instagram (24.01x), Facebook (23.46x), Google Ads (22.97x), and YouTube (22.13x).
+
+### Cost per Enrollment (CAC)
+**LinkedIn is the most cost-efficient at ₹219/enrollment**, despite its premium reputation — likely due to higher-intent professional audiences. Google Ads and YouTube are the priciest at ₹243.
+
+### Monthly Spend Trend
+Spend is broadly stable at ~₹35–40L/month with two notable spikes: **March 2024 (~₹70L)** and **August 2024 (~₹73L)**, and a peak in **May 2025 (~₹77L)**.
+
+### A/B Test (Google Ads vs Facebook — CTR)
+- Google Ads: **5.496%** | Facebook: **5.548%**
+- p-value: **0.7304** → **Not statistically significant**
+- The CTR difference between the two highest-impression platforms is attributable to random variation, not a true performance gap.
 
 ---
 
-## A/B Testing
-We compare top platforms using statistical testing.
+## Skills Demonstrated
 
-Hypothesis:
-H0: CTR is the same
-H1: CTR is different
+- **Data wrangling** — Excel ingestion, column standardisation, null/duplicate handling with Pandas
+- **KPI design** — Ratio metrics (CTR, ROAS, CAC) calculated on aggregated totals to avoid averaging bias
+- **Data visualisation** — Consistent chart style, annotated bar charts, area line chart, box plots
+- **Statistical testing** — Two-sample t-test / Z-test with hypothesis framing and p-value interpretation
+- **Modular scripting** — Clean separation of cleaning, analysis, and stats into independent, reusable scripts
 
-Using a t-test:
+---
 
-If p < 0.05 → significant difference
-Else → difference is noise
-
-```
+*Tools: Python 3, Pandas, Matplotlib, SciPy, openpyxl*
