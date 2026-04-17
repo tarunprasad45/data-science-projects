@@ -11,6 +11,30 @@ Each project follows a consistent approach:
 
 ---
 
+### 🏦 Indian Banking Sector Analysis  
+**Python · Pandas · Matplotlib · Financial Analysis**
+
+🔗 [View Project](./Indian_Banking_Sector)
+
+#### Overview
+End-to-end analysis of the Indian banking system using RBI data (~25 years). Focused on understanding the relationship between **credit growth, deposit dynamics, and asset quality (NPAs)** across economic cycles.
+
+#### Key Highlights
+- Built a robust data pipeline to clean and structure **messy RBI datasets with multi-level headers**
+- Aggregated bank-level NPA data into **system-level risk indicators (correctly recomputed percentages)**
+- Engineered key financial metrics: **credit growth, deposit growth, GNPA %, NNPA %, and credit-deposit ratio**
+- Developed time-series visualizations to identify **structural shifts in banking cycles**
+
+#### Key Insights
+- Banking sector moved through **clear cycles**: cleanup (1996–2008), risk buildup (post-2008), AQR-driven stress (2015–18), and recovery (post-2020)
+- GNPA declined from ~15% → ~2%, then spiked >10% before falling again — highlighting **risk recognition vs risk creation**
+- Credit growth remains strong while NPAs decline → **healthier lending environment**
+- Credit-to-Deposit ratio increased from ~0.55 → ~0.80, signalling **tightening liquidity conditions**
+
+---
+
+---
+
 ### 🛒 Retail Sales Analytics  
 **Python · SQL (SQLite) · Pandas · Matplotlib · Scikit-learn**
 
