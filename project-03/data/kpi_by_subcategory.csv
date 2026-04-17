@@ -1,0 +1,11 @@
+sub_category,category,total_revenue,total_profit,margin_pct
+Phones,Technology,330007.05,44515.73,13.49
+Chairs,Furniture,328449.1,26590.17,8.1
+Storage,Office Supplies,223843.61,21278.83,9.51
+Tables,Furniture,206965.53,-17725.48,-8.56
+Binders,Office Supplies,203412.73,30221.76,14.86
+Machines,Technology,189238.63,3384.76,1.79
+Accessories,Technology,167380.32,41936.64,25.05
+Copiers,Technology,149528.03,55617.82,37.2
+Bookcases,Furniture,114880.0,-3472.56,-3.02
+Appliances,Office Supplies,107532.16,18138.01,16.87
