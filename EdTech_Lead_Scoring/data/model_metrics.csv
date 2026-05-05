@@ -1,0 +1,2 @@
+accuracy,auc,sensitivity,specificity,threshold,train_size,test_size
+74.06,75.35,56.92,85.0,0.475,5342,1781
