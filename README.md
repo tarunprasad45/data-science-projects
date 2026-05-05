@@ -11,6 +11,29 @@ Each project follows a consistent approach:
 
 ---
 
+### 🎓 EdTech Lead Scoring Model
+**Python · Pandas · Scikit-learn · Statsmodels · Imbalanced-learn**
+
+🔗 [View Project](./EdTech_Lead_Scoring)
+
+#### Overview
+Lead scoring model for X Education, an online course platform converting only 38.3% of inbound leads. Built a full ML pipeline to assign every lead a 0–100 score and segment into Hot/Warm/Cold tiers — enabling sales teams to prioritise the highest-probability prospects instead of working the entire funnel uniformly.
+
+#### Key Highlights
+- Built 4-script pipeline: **clean → EDA → model → business insights**
+- Model stack: **SMOTE + RFE (55→20 features) + iterative VIF pruning + threshold optimisation**
+- Scaler deliberately fitted **post feature selection** to avoid column mismatch — documented explicitly
+- Identified **near-perfect separation anomaly** in Occupation_Housewife coefficient rather than reporting it at face value
+
+#### Key Insights
+- **Hot tier (30% of leads) converts at 71.7%** vs 38.3% baseline — **1.9× lift**
+- Working Professionals convert at **90.1%** vs Unemployed at 33.7% — acquisition audience mismatch
+- Time on site median gap: **1,047s (converters) vs 260s (non-converters)** — 4× behavioural signal
+- Referral Sites convert at **61.1%** vs Direct Traffic at 32.6% — paid search producing lowest-quality leads
+- AUC **0.753**, Accuracy **74.1%**, Specificity **85.0%** on held-out test set
+
+---
+
 ### 🏦 Indian Banking Sector Analysis  
 **Python · Pandas · Matplotlib · Financial Analysis**
 
@@ -30,8 +53,6 @@ End-to-end analysis of the Indian banking system using RBI data (~25 years). Foc
 - GNPA declined from ~15% → ~2%, then spiked >10% before falling again — highlighting **risk recognition vs risk creation**
 - Credit growth remains strong while NPAs decline → **healthier lending environment**
 - Credit-to-Deposit ratio increased from ~0.55 → ~0.80, signalling **tightening liquidity conditions**
-
----
 
 ---
 
@@ -92,10 +113,7 @@ Customer behaviour analysis + segmentation using **unsupervised learning (KMeans
 #### Key Insights
 - Gold customers spend **~3× more than Bronze**
 - Only **35% customers satisfied → retention risk**
-- Identified 3 segments:
-  - High Value
-  - Occasional
-  - At Risk
+- Identified 3 segments: High Value, Occasional, At Risk
 
 ---
 
@@ -103,33 +121,41 @@ Customer behaviour analysis + segmentation using **unsupervised learning (KMeans
 
 ### 📊 Data Analysis
 - Exploratory Data Analysis (EDA)
-- KPI Design (CTR, ROAS, CAC, Margin)
+- KPI Design (CTR, ROAS, CAC, Margin, Conversion Rate, Lead Score)
 - Business Insight Extraction
+- Funnel & Conversion Analysis
 
 ### 🗄️ Data Engineering
 - Relational Database Design
 - SQL (JOIN, GROUP BY, CASE WHEN)
 - Data Pipelines
+- Feature Engineering & Category Consolidation
 
 ### 📈 Visualisation
-- Matplotlib (bar, line, scatter, dual-axis)
+- Matplotlib (bar, line, scatter, dual-axis, histogram, donut)
 - Insight-driven charting (not just plotting)
+- KPI Dashboard Cards
 
 ### 🤖 Machine Learning
+- Logistic Regression (lead scoring + threshold optimisation)
 - Linear Regression (forecasting + evaluation)
 - KMeans Clustering (customer segmentation)
+- SMOTE (class imbalance handling)
+- RFE (feature selection)
 - Feature Scaling & Model Interpretation
 
 ### 📐 Statistics
 - Hypothesis Testing (Z-test / t-test)
 - p-value interpretation
 - Confidence Intervals
+- VIF (multicollinearity detection)
+- ROC / AUC analysis
 
 ---
 
 ## ⚙️ Tech Stack
 
-- Python (Pandas, NumPy, Matplotlib, Scikit-learn, SciPy)
+- Python (Pandas, NumPy, Matplotlib, Scikit-learn, Statsmodels, Imbalanced-learn, SciPy)
 - SQL (SQLite)
 - Excel (raw data handling)
 
@@ -139,13 +165,8 @@ Customer behaviour analysis + segmentation using **unsupervised learning (KMeans
 
 - Not just charts — **structured pipelines**
 - Not just models — **business interpretation**
-- Not just results — **honest evaluation (e.g., low R²)**  
+- Not just results — **honest evaluation**
 - Focus on **real-world decision-making, not textbook outputs**
-
----
-
-## 📬 Contact
-
-If you're hiring for **Data Analyst / Quant / Analytics roles**, feel free to reach out.
+- Hypotheses formed **before** analysis — confirmed or rejected with data
 
 ---
